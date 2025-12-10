@@ -1,0 +1,240 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1170,
+        162
+      ],
+      "width": 1170,
+      "height": 162
+    },
+    {
+      "id": "back_button",
+      "type": "icon_button",
+      "bbox": [
+        37,
+        129,
+        110,
+        230
+      ],
+      "width": 73,
+      "height": 101,
+      "parent": "status_bar"
+    },
+    {
+      "id": "logo_text",
+      "type": "text",
+      "bbox": [
+        110,
+        372,
+        290,
+        476
+      ],
+      "width": 180,
+      "height": 104,
+      "parent": "status_bar",
+      "text": "\u597d\u8f7b"
+    },
+    {
+      "id": "tagline_text",
+      "type": "text",
+      "bbox": [
+        110,
+        506,
+        433,
+        560
+      ],
+      "width": 323,
+      "height": 54,
+      "parent": "status_bar",
+      "text": "\u8bb0\u5f55\u6bcf\u4e00\u6b21\u6539\u53d8"
+    },
+    {
+      "id": "phone_input",
+      "type": "input",
+      "bbox": [
+        159,
+        891,
+        1004,
+        962
+      ],
+      "width": 845,
+      "height": 71,
+      "parent": "status_bar",
+      "text": "150 0000 0000"
+    },
+    {
+      "id": "verification_code_input",
+      "type": "input",
+      "bbox": [
+        159,
+        1056,
+        760,
+        1127
+      ],
+      "width": 601,
+      "height": 71,
+      "parent": "status_bar",
+      "text": "\u8bf7\u8f93\u5165\u77ed\u4fe1\u9a8c\u8bc1\u7801"
+    },
+    {
+      "id": "get_verification_code_button",
+      "type": "button",
+      "bbox": [
+        793,
+        1056,
+        1009,
+        1117
+      ],
+      "width": 216,
+      "height": 61,
+      "parent": "status_bar",
+      "text": "\u83b7\u53d6\u9a8c\u8bc1\u7801"
+    },
+    {
+      "id": "login_register_button",
+      "type": "button",
+      "bbox": [
+        110,
+        1218,
+        1058,
+        1365
+      ],
+      "width": 948,
+      "height": 147,
+      "parent": "status_bar",
+      "text": "\u767b\u5f55/\u6ce8\u518c"
+    },
+    {
+      "id": "password_login_link",
+      "type": "text",
+      "bbox": [
+        501,
+        1413,
+        667,
+        1463
+      ],
+      "width": 166,
+      "height": 50,
+      "parent": "status_bar",
+      "text": "\u5bc6\u7801\u767b\u5f55"
+    },
+    {
+      "id": "apple_login_button",
+      "type": "icon_button",
+      "bbox": [
+        138,
+        2157,
+        253,
+        2274
+      ],
+      "width": 115,
+      "height": 117,
+      "parent": "status_bar"
+    },
+    {
+      "id": "wechat_login_button",
+      "type": "icon_button",
+      "bbox": [
+        398,
+        2157,
+        512,
+        2274
+      ],
+      "width": 114,
+      "height": 117,
+      "parent": "status_bar"
+    },
+    {
+      "id": "qq_login_button",
+      "type": "icon_button",
+      "bbox": [
+        658,
+        2157,
+        772,
+        2274
+      ],
+      "width": 114,
+      "height": 117,
+      "parent": "status_bar"
+    },
+    {
+      "id": "weibo_login_button",
+      "type": "icon_button",
+      "bbox": [
+        917,
+        2157,
+        1032,
+        2274
+      ],
+      "width": 115,
+      "height": 117,
+      "parent": "status_bar"
+    },
+    {
+      "id": "checkbox",
+      "type": "checkbox",
+      "bbox": [
+        206,
+        2365,
+        241,
+        2405
+      ],
+      "width": 35,
+      "height": 40,
+      "parent": "status_bar"
+    },
+    {
+      "id": "terms_text",
+      "type": "text",
+      "bbox": [
+        257,
+        2365,
+        910,
+        2405
+      ],
+      "width": 653,
+      "height": 40,
+      "parent": "status_bar",
+      "text": "\u6211\u5df2\u9605\u8bfb\u5e76\u540c\u610f\u597d\u8f7b\u7528\u6237\u534f\u8bae\u548c\u9690\u79c1\u653f\u7b56"
+    },
+    {
+      "id": "user_agreement_link",
+      "type": "text",
+      "bbox": [
+        585,
+        2365,
+        730,
+        2405
+      ],
+      "width": 145,
+      "height": 40,
+      "parent": "terms_text",
+      "text": "\u7528\u6237\u534f\u8bae"
+    },
+    {
+      "id": "privacy_policy_link",
+      "type": "text",
+      "bbox": [
+        765,
+        2365,
+        910,
+        2405
+      ],
+      "width": 145,
+      "height": 40,
+      "parent": "terms_text",
+      "text": "\u9690\u79c1\u653f\u7b56"
+    }
+  ],
+  "meta": {
+    "scale_x": 1.17,
+    "scale_y": 2.532,
+    "frame_w": 1000,
+    "frame_h": 1000
+  }
+}

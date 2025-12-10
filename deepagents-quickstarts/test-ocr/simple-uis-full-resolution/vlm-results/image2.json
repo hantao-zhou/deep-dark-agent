@@ -1,0 +1,576 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1170,
+        162
+      ],
+      "width": 1170,
+      "height": 162,
+      "text": "17:27"
+    },
+    {
+      "id": "toolbar",
+      "type": "toolbar",
+      "bbox": [
+        67,
+        147,
+        143,
+        233
+      ],
+      "width": 76,
+      "height": 86,
+      "parent": "status_bar"
+    },
+    {
+      "id": "title_label",
+      "type": "label",
+      "bbox": [
+        505,
+        162,
+        662,
+        223
+      ],
+      "width": 157,
+      "height": 61,
+      "text": "\u767d\u566a\u97f3",
+      "parent": "status_bar"
+    },
+    {
+      "id": "search_icon",
+      "type": "icon_button",
+      "bbox": [
+        934,
+        157,
+        1002,
+        228
+      ],
+      "width": 68,
+      "height": 71,
+      "parent": "status_bar"
+    },
+    {
+      "id": "music_icon",
+      "type": "icon_button",
+      "bbox": [
+        1030,
+        147,
+        1115,
+        238
+      ],
+      "width": 85,
+      "height": 91,
+      "parent": "status_bar"
+    },
+    {
+      "id": "header_text",
+      "type": "label",
+      "bbox": [
+        63,
+        281,
+        322,
+        354
+      ],
+      "width": 259,
+      "height": 73,
+      "text": "\u81ea\u7531\u7ec4\u5408",
+      "parent": "status_bar"
+    },
+    {
+      "id": "tabbar",
+      "type": "tabbar",
+      "bbox": [
+        360,
+        289,
+        1169,
+        354
+      ],
+      "width": 809,
+      "height": 65,
+      "parent": "status_bar"
+    },
+    {
+      "id": "tab_all",
+      "type": "tab",
+      "bbox": [
+        63,
+        410,
+        201,
+        494
+      ],
+      "width": 138,
+      "height": 84,
+      "text": "\u5168\u90e8",
+      "parent": "tabbar"
+    },
+    {
+      "id": "tab_vip",
+      "type": "tab",
+      "bbox": [
+        250,
+        425,
+        318,
+        479
+      ],
+      "width": 68,
+      "height": 54,
+      "text": "VIP",
+      "parent": "tabbar"
+    },
+    {
+      "id": "tab_classroom",
+      "type": "tab",
+      "bbox": [
+        397,
+        425,
+        538,
+        479
+      ],
+      "width": 141,
+      "height": 54,
+      "text": "\u8bfe\u5802",
+      "parent": "tabbar"
+    },
+    {
+      "id": "tab_rain",
+      "type": "tab",
+      "bbox": [
+        624,
+        425,
+        708,
+        479
+      ],
+      "width": 84,
+      "height": 54,
+      "text": "\u96e8\u58f0",
+      "parent": "tabbar"
+    },
+    {
+      "id": "tab_asmr",
+      "type": "tab",
+      "bbox": [
+        790,
+        425,
+        907,
+        479
+      ],
+      "width": 117,
+      "height": 54,
+      "text": "ASMR",
+      "parent": "tabbar"
+    },
+    {
+      "id": "tab_baby",
+      "type": "tab",
+      "bbox": [
+        989,
+        425,
+        1169,
+        479
+      ],
+      "width": 180,
+      "height": 54,
+      "text": "\u5b9d\u5b9d\u54c4\u7761",
+      "parent": "tabbar"
+    },
+    {
+      "id": "grid_container",
+      "type": "container",
+      "bbox": [
+        63,
+        582,
+        1169,
+        2051
+      ],
+      "width": 1106,
+      "height": 1469,
+      "parent": "status_bar"
+    },
+    {
+      "id": "item_night_rain",
+      "type": "list_item",
+      "bbox": [
+        63,
+        582,
+        250,
+        767
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u591c\u9611\u542c\u96e8",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_wind_bamboo",
+      "type": "list_item",
+      "bbox": [
+        349,
+        582,
+        536,
+        767
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u98ce\u5439\u7af9\u6797",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_garden",
+      "type": "list_item",
+      "bbox": [
+        634,
+        582,
+        821,
+        767
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u82b1\u95f4\u98ce\u6708",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_leaf_boat",
+      "type": "list_item",
+      "bbox": [
+        920,
+        582,
+        1107,
+        767
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u4e00\u53f6\u6241\u821f",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_sheep",
+      "type": "list_item",
+      "bbox": [
+        63,
+        904,
+        250,
+        1089
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u7f8a\u6c34\u80ce\u5fc3",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_fan",
+      "type": "list_item",
+      "bbox": [
+        349,
+        904,
+        536,
+        1089
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u5439\u98ce\u673a 2",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_baby_sleep",
+      "type": "list_item",
+      "bbox": [
+        634,
+        904,
+        821,
+        1089
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u5a74\u513f\u9163\u7720",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_murmur",
+      "type": "list_item",
+      "bbox": [
+        920,
+        904,
+        1107,
+        1089
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u5618\u2014\u5618\u2014",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_tide",
+      "type": "list_item",
+      "bbox": [
+        63,
+        1225,
+        250,
+        1410
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u6f6e\u62cd\u6d77\u5cb8",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_rain_leaf",
+      "type": "list_item",
+      "bbox": [
+        349,
+        1225,
+        536,
+        1410
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u96e8\u6ef4\u53f6\u54cd",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_stream",
+      "type": "list_item",
+      "bbox": [
+        634,
+        1225,
+        821,
+        1410
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u6eaa\u8fb9\u866b\u9e23",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_leaf_fall",
+      "type": "list_item",
+      "bbox": [
+        920,
+        1225,
+        1107,
+        1410
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u8f7b\u8e0f\u843d\u53f6",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_stream_cool",
+      "type": "list_item",
+      "bbox": [
+        63,
+        1542,
+        250,
+        1727
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u6eaa\u6c34\u6dd9\u6dd9",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_snow",
+      "type": "list_item",
+      "bbox": [
+        349,
+        1542,
+        536,
+        1727
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u8e0f\u96ea\u5bfb\u6885",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_forest",
+      "type": "list_item",
+      "bbox": [
+        634,
+        1542,
+        821,
+        1727
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u6797\u4e2d\u9e1f\u8bed",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_violin",
+      "type": "list_item",
+      "bbox": [
+        920,
+        1542,
+        1107,
+        1727
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u5927\u63d0\u7434 1",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_guitar",
+      "type": "list_item",
+      "bbox": [
+        63,
+        1858,
+        250,
+        2043
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u5409\u4ed6\u66f2 1",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_piano",
+      "type": "list_item",
+      "bbox": [
+        349,
+        1858,
+        536,
+        2043
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u94a2\u7434\u66f2 1",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_harp",
+      "type": "list_item",
+      "bbox": [
+        634,
+        1858,
+        821,
+        2043
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u7ad6\u7434\u66f2 1",
+      "parent": "grid_container"
+    },
+    {
+      "id": "item_zither",
+      "type": "list_item",
+      "bbox": [
+        920,
+        1858,
+        1107,
+        2043
+      ],
+      "width": 187,
+      "height": 185,
+      "text": "\u53e4\u7b5d\u66f2 1",
+      "parent": "grid_container"
+    },
+    {
+      "id": "banner",
+      "type": "banner",
+      "bbox": [
+        157,
+        2018,
+        1011,
+        2167
+      ],
+      "width": 854,
+      "height": 149,
+      "text": "\u7cbe\u795e\u5185\u8017\u6025\u6551\u5305",
+      "parent": "grid_container"
+    },
+    {
+      "id": "banner_button",
+      "type": "button",
+      "bbox": [
+        894,
+        2038,
+        1011,
+        2167
+      ],
+      "width": 117,
+      "height": 129,
+      "text": "\u4e00\u952e\u6536\u85cf",
+      "parent": "banner"
+    },
+    {
+      "id": "bottom_bar",
+      "type": "container",
+      "bbox": [
+        119,
+        2167,
+        1051,
+        2393
+      ],
+      "width": 932,
+      "height": 226,
+      "parent": "grid_container"
+    },
+    {
+      "id": "bottom_button_1",
+      "type": "button",
+      "bbox": [
+        157,
+        2228,
+        263,
+        2335
+      ],
+      "width": 106,
+      "height": 107,
+      "text": "\u591c\u866b\u5527\u5527",
+      "parent": "bottom_bar"
+    },
+    {
+      "id": "bottom_button_2",
+      "type": "button",
+      "bbox": [
+        322,
+        2228,
+        466,
+        2335
+      ],
+      "width": 144,
+      "height": 107,
+      "text": "\u7ea2\u6ce5\u5c0f\u7089",
+      "parent": "bottom_bar"
+    },
+    {
+      "id": "bottom_button_3",
+      "type": "button",
+      "bbox": [
+        524,
+        2228,
+        668,
+        2335
+      ],
+      "width": 144,
+      "height": 107,
+      "text": "\u96e8\u6253\u82ad\u8549",
+      "parent": "bottom_bar"
+    },
+    {
+      "id": "play_button",
+      "type": "button",
+      "bbox": [
+        903,
+        2228,
+        1011,
+        2335
+      ],
+      "width": 108,
+      "height": 107,
+      "parent": "bottom_bar"
+    }
+  ],
+  "meta": {
+    "scale_x": 1.17,
+    "scale_y": 2.532,
+    "frame_w": 1000,
+    "frame_h": 1000
+  }
+}

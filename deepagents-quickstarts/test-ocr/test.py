@@ -18,7 +18,9 @@ model = model.eval().cuda().to(torch.bfloat16)
 # prompt = "<image>\nFree OCR. "
 prompt = "<image>\n<|grounding|>Convert the document to markdown."
 
-prompt = "<image>\n<|grounding|>Convert the document to markdown."
+prompt = "<image>\n<|grounding|>Identify all elements in the image and output them in bounding boxes."
+
+# prompt = "<image>\n<|grounding|>Identify all UI elements in the image."
 # image_file = '/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/IMG20251209-152652.jpg'
 
 images_list = [
@@ -27,7 +29,10 @@ images_list = [
     "/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/simple-uis/5825370c335a3f8d372c59b75a50a8d2.jpg",
     '/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/image.png'
 ]
-image_file = images_list[0]
+
+images_list = os.listdir('/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/simple-uis-full-resolution/inputs')
+image_file = os.path.join('/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/simple-uis-full-resolution/inputs',
+    images_list[0])
 output_path = '/home/hans/workspace/outsource/deep-dark-agent/deepagents-quickstarts/test-ocr/'
 
 

@@ -1,0 +1,412 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1080,
+        58
+      ],
+      "width": 1080,
+      "height": 58
+    },
+    {
+      "id": "toolbar",
+      "type": "toolbar",
+      "bbox": [
+        0,
+        58,
+        1080,
+        139
+      ],
+      "width": 1080,
+      "height": 81
+    },
+    {
+      "id": "map_container",
+      "type": "container",
+      "bbox": [
+        0,
+        139,
+        1080,
+        657
+      ],
+      "width": 1080,
+      "height": 518
+    },
+    {
+      "id": "location_prompt_container",
+      "type": "container",
+      "bbox": [
+        246,
+        297,
+        752,
+        400
+      ],
+      "width": 506,
+      "height": 103,
+      "parent": "map_container"
+    },
+    {
+      "id": "location_icon",
+      "type": "icon",
+      "bbox": [
+        246,
+        297,
+        320,
+        338
+      ],
+      "width": 74,
+      "height": 41,
+      "parent": "location_prompt_container"
+    },
+    {
+      "id": "location_prompt_text",
+      "type": "text",
+      "bbox": [
+        338,
+        302,
+        746,
+        335
+      ],
+      "width": 408,
+      "height": 33,
+      "parent": "location_prompt_container",
+      "text": "\u5f00\u542f\u4f4d\u7f6e\u6743\u9650 >"
+    },
+    {
+      "id": "location_prompt_description",
+      "type": "text",
+      "bbox": [
+        178,
+        355,
+        818,
+        400
+      ],
+      "width": 640,
+      "height": 45,
+      "parent": "location_prompt_container",
+      "text": "Keep \u8bbf\u95ee\u4f60\u7684\u4f4d\u7f6e\u4fe1\u606f\uff0c\u7528\u4e8e\u8bb0\u5f55\u4f60\u7684\u8fd0\u52a8\u6570\u636e\uff0c\u63d0\u4f9b\u8eab\u8fb9\u7684\u8fd0\u52a8\u5185\u5bb9\u63a8\u8350"
+    },
+    {
+      "id": "tabbar",
+      "type": "tabbar",
+      "bbox": [
+        416,
+        671,
+        774,
+        703
+      ],
+      "width": 358,
+      "height": 32,
+      "parent": "map_container"
+    },
+    {
+      "id": "free_ride_tab",
+      "type": "tab",
+      "bbox": [
+        416,
+        671,
+        578,
+        703
+      ],
+      "width": 162,
+      "height": 32,
+      "parent": "tabbar",
+      "text": "\u81ea\u7531\u9a91"
+    },
+    {
+      "id": "target_ride_tab",
+      "type": "tab",
+      "bbox": [
+        632,
+        671,
+        774,
+        703
+      ],
+      "width": 142,
+      "height": 32,
+      "parent": "tabbar",
+      "text": "\u76ee\u6807\u9a91"
+    },
+    {
+      "id": "go_button",
+      "type": "button",
+      "bbox": [
+        376,
+        739,
+        622,
+        856
+      ],
+      "width": 246,
+      "height": 117,
+      "parent": "map_container"
+    },
+    {
+      "id": "route_button",
+      "type": "button",
+      "bbox": [
+        51,
+        770,
+        324,
+        823
+      ],
+      "width": 273,
+      "height": 53,
+      "parent": "map_container"
+    },
+    {
+      "id": "route_icon",
+      "type": "icon",
+      "bbox": [
+        113,
+        785,
+        156,
+        808
+      ],
+      "width": 43,
+      "height": 23,
+      "parent": "route_button"
+    },
+    {
+      "id": "route_text",
+      "type": "text",
+      "bbox": [
+        184,
+        787,
+        266,
+        807
+      ],
+      "width": 82,
+      "height": 20,
+      "parent": "route_button",
+      "text": "\u8def\u7ebf"
+    },
+    {
+      "id": "bike_button",
+      "type": "button",
+      "bbox": [
+        676,
+        770,
+        949,
+        823
+      ],
+      "width": 273,
+      "height": 53,
+      "parent": "map_container"
+    },
+    {
+      "id": "bike_icon",
+      "type": "icon",
+      "bbox": [
+        713,
+        785,
+        774,
+        808
+      ],
+      "width": 61,
+      "height": 23,
+      "parent": "bike_button"
+    },
+    {
+      "id": "bike_text",
+      "type": "text",
+      "bbox": [
+        792,
+        787,
+        912,
+        807
+      ],
+      "width": 120,
+      "height": 20,
+      "parent": "bike_button",
+      "text": "\u81ea\u884c\u8f66"
+    },
+    {
+      "id": "bottom_navbar",
+      "type": "navbar",
+      "bbox": [
+        0,
+        900,
+        1080,
+        999
+      ],
+      "width": 1080,
+      "height": 99
+    },
+    {
+      "id": "activity_log_tab",
+      "type": "tab",
+      "bbox": [
+        266,
+        900,
+        410,
+        999
+      ],
+      "width": 144,
+      "height": 99,
+      "parent": "bottom_navbar"
+    },
+    {
+      "id": "outdoor_cycling_tab",
+      "type": "tab",
+      "bbox": [
+        410,
+        900,
+        578,
+        999
+      ],
+      "width": 168,
+      "height": 99,
+      "parent": "bottom_navbar"
+    },
+    {
+      "id": "outdoor_running_tab",
+      "type": "tab",
+      "bbox": [
+        578,
+        900,
+        746,
+        999
+      ],
+      "width": 168,
+      "height": 99,
+      "parent": "bottom_navbar"
+    },
+    {
+      "id": "outdoor_walking_tab",
+      "type": "tab",
+      "bbox": [
+        746,
+        900,
+        912,
+        999
+      ],
+      "width": 166,
+      "height": 99,
+      "parent": "bottom_navbar"
+    },
+    {
+      "id": "more_tab",
+      "type": "tab",
+      "bbox": [
+        912,
+        900,
+        1080,
+        999
+      ],
+      "width": 168,
+      "height": 99,
+      "parent": "bottom_navbar"
+    },
+    {
+      "id": "gps_status",
+      "type": "badge",
+      "bbox": [
+        820,
+        159,
+        952,
+        184
+      ],
+      "width": 132,
+      "height": 25,
+      "parent": "map_container",
+      "text": "GPS !"
+    },
+    {
+      "id": "close_button",
+      "type": "icon_button",
+      "bbox": [
+        32,
+        77,
+        108,
+        112
+      ],
+      "width": 76,
+      "height": 35,
+      "parent": "toolbar"
+    },
+    {
+      "id": "user_avatar",
+      "type": "avatar",
+      "bbox": [
+        144,
+        75,
+        220,
+        114
+      ],
+      "width": 76,
+      "height": 39,
+      "parent": "toolbar"
+    },
+    {
+      "id": "share_button",
+      "type": "icon_button",
+      "bbox": [
+        684,
+        77,
+        760,
+        112
+      ],
+      "width": 76,
+      "height": 35,
+      "parent": "toolbar"
+    },
+    {
+      "id": "bluetooth_button",
+      "type": "icon_button",
+      "bbox": [
+        784,
+        70,
+        860,
+        107
+      ],
+      "width": 76,
+      "height": 37,
+      "parent": "toolbar"
+    },
+    {
+      "id": "settings_button",
+      "type": "icon_button",
+      "bbox": [
+        892,
+        77,
+        968,
+        112
+      ],
+      "width": 76,
+      "height": 35,
+      "parent": "toolbar"
+    },
+    {
+      "id": "distance_text",
+      "type": "text",
+      "bbox": [
+        258,
+        93,
+        476,
+        120
+      ],
+      "width": 218,
+      "height": 27,
+      "parent": "toolbar",
+      "text": "80.41\u516c\u91cc"
+    },
+    {
+      "id": "month_text",
+      "type": "text",
+      "bbox": [
+        258,
+        67,
+        548,
+        87
+      ],
+      "width": 290,
+      "height": 20,
+      "parent": "toolbar",
+      "text": "\u6237\u5916\u9a91\u884c\u00b78\u6708>"
+    }
+  ]
+}

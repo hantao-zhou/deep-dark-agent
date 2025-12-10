@@ -1,0 +1,234 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1080,
+        64
+      ],
+      "width": 1080,
+      "height": 64
+    },
+    {
+      "id": "back_button",
+      "type": "icon_button",
+      "bbox": [
+        32,
+        51,
+        94,
+        91
+      ],
+      "width": 62,
+      "height": 40,
+      "parent": "status_bar"
+    },
+    {
+      "id": "logo_text",
+      "type": "text",
+      "bbox": [
+        94,
+        147,
+        248,
+        188
+      ],
+      "width": 154,
+      "height": 41,
+      "parent": "status_bar",
+      "text": "\u597d\u8f7b"
+    },
+    {
+      "id": "tagline_text",
+      "type": "text",
+      "bbox": [
+        94,
+        200,
+        370,
+        221
+      ],
+      "width": 276,
+      "height": 21,
+      "parent": "status_bar",
+      "text": "\u8bb0\u5f55\u6bcf\u4e00\u6b21\u6539\u53d8"
+    },
+    {
+      "id": "phone_input",
+      "type": "input",
+      "bbox": [
+        136,
+        352,
+        858,
+        380
+      ],
+      "width": 722,
+      "height": 28,
+      "parent": "status_bar",
+      "text": "150 0000 0000"
+    },
+    {
+      "id": "verification_code_input",
+      "type": "input",
+      "bbox": [
+        136,
+        417,
+        650,
+        445
+      ],
+      "width": 514,
+      "height": 28,
+      "parent": "status_bar",
+      "text": "\u8bf7\u8f93\u5165\u77ed\u4fe1\u9a8c\u8bc1\u7801"
+    },
+    {
+      "id": "get_verification_code_button",
+      "type": "button",
+      "bbox": [
+        678,
+        417,
+        862,
+        441
+      ],
+      "width": 184,
+      "height": 24,
+      "parent": "status_bar",
+      "text": "\u83b7\u53d6\u9a8c\u8bc1\u7801"
+    },
+    {
+      "id": "login_register_button",
+      "type": "button",
+      "bbox": [
+        94,
+        481,
+        904,
+        539
+      ],
+      "width": 810,
+      "height": 58,
+      "parent": "status_bar",
+      "text": "\u767b\u5f55/\u6ce8\u518c"
+    },
+    {
+      "id": "password_login_link",
+      "type": "text",
+      "bbox": [
+        428,
+        558,
+        570,
+        578
+      ],
+      "width": 142,
+      "height": 20,
+      "parent": "status_bar",
+      "text": "\u5bc6\u7801\u767b\u5f55"
+    },
+    {
+      "id": "apple_login_button",
+      "type": "icon_button",
+      "bbox": [
+        118,
+        852,
+        216,
+        898
+      ],
+      "width": 98,
+      "height": 46,
+      "parent": "status_bar"
+    },
+    {
+      "id": "wechat_login_button",
+      "type": "icon_button",
+      "bbox": [
+        340,
+        852,
+        438,
+        898
+      ],
+      "width": 98,
+      "height": 46,
+      "parent": "status_bar"
+    },
+    {
+      "id": "qq_login_button",
+      "type": "icon_button",
+      "bbox": [
+        562,
+        852,
+        660,
+        898
+      ],
+      "width": 98,
+      "height": 46,
+      "parent": "status_bar"
+    },
+    {
+      "id": "weibo_login_button",
+      "type": "icon_button",
+      "bbox": [
+        784,
+        852,
+        882,
+        898
+      ],
+      "width": 98,
+      "height": 46,
+      "parent": "status_bar"
+    },
+    {
+      "id": "checkbox",
+      "type": "checkbox",
+      "bbox": [
+        176,
+        934,
+        206,
+        950
+      ],
+      "width": 30,
+      "height": 16,
+      "parent": "status_bar"
+    },
+    {
+      "id": "terms_text",
+      "type": "text",
+      "bbox": [
+        220,
+        934,
+        778,
+        950
+      ],
+      "width": 558,
+      "height": 16,
+      "parent": "status_bar",
+      "text": "\u6211\u5df2\u9605\u8bfb\u5e76\u540c\u610f\u597d\u8f7b\u7528\u6237\u534f\u8bae\u548c\u9690\u79c1\u653f\u7b56"
+    },
+    {
+      "id": "user_agreement_link",
+      "type": "text",
+      "bbox": [
+        500,
+        934,
+        624,
+        950
+      ],
+      "width": 124,
+      "height": 16,
+      "parent": "terms_text",
+      "text": "\u7528\u6237\u534f\u8bae"
+    },
+    {
+      "id": "privacy_policy_link",
+      "type": "text",
+      "bbox": [
+        654,
+        934,
+        778,
+        950
+      ],
+      "width": 124,
+      "height": 16,
+      "parent": "terms_text",
+      "text": "\u9690\u79c1\u653f\u7b56"
+    }
+  ]
+}

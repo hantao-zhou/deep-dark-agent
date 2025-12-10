@@ -1,0 +1,597 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1170,
+        162
+      ],
+      "width": 1170,
+      "height": 162
+    },
+    {
+      "id": "back_button",
+      "type": "button",
+      "bbox": [
+        50,
+        142,
+        129,
+        243
+      ],
+      "width": 79,
+      "height": 101,
+      "parent": "status_bar"
+    },
+    {
+      "id": "title_label",
+      "type": "label",
+      "bbox": [
+        476,
+        162,
+        693,
+        223
+      ],
+      "width": 217,
+      "height": 61,
+      "parent": "status_bar",
+      "text": "\u8c03\u6574\u6392\u5e8f"
+    },
+    {
+      "id": "list_container",
+      "type": "container",
+      "bbox": [
+        60,
+        316,
+        1117,
+        2529
+      ],
+      "width": 1057,
+      "height": 2213
+    },
+    {
+      "id": "list_item_1",
+      "type": "list_item",
+      "bbox": [
+        60,
+        316,
+        1117,
+        560
+      ],
+      "width": 1057,
+      "height": 244,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_2",
+      "type": "list_item",
+      "bbox": [
+        60,
+        610,
+        1117,
+        853
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_3",
+      "type": "list_item",
+      "bbox": [
+        60,
+        904,
+        1117,
+        1147
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_4",
+      "type": "list_item",
+      "bbox": [
+        60,
+        1198,
+        1117,
+        1441
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_5",
+      "type": "list_item",
+      "bbox": [
+        60,
+        1491,
+        1117,
+        1734
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_6",
+      "type": "list_item",
+      "bbox": [
+        60,
+        1785,
+        1117,
+        2028
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_7",
+      "type": "list_item",
+      "bbox": [
+        60,
+        2079,
+        1117,
+        2322
+      ],
+      "width": 1057,
+      "height": 243,
+      "parent": "list_container"
+    },
+    {
+      "id": "list_item_8",
+      "type": "list_item",
+      "bbox": [
+        60,
+        2372,
+        1117,
+        2529
+      ],
+      "width": 1057,
+      "height": 157,
+      "parent": "list_container"
+    },
+    {
+      "id": "icon_1",
+      "type": "image",
+      "bbox": [
+        117,
+        375,
+        248,
+        504
+      ],
+      "width": 131,
+      "height": 129,
+      "parent": "list_item_1"
+    },
+    {
+      "id": "icon_2",
+      "type": "image",
+      "bbox": [
+        117,
+        666,
+        248,
+        795
+      ],
+      "width": 131,
+      "height": 129,
+      "parent": "list_item_2"
+    },
+    {
+      "id": "icon_3",
+      "type": "image",
+      "bbox": [
+        117,
+        962,
+        248,
+        1089
+      ],
+      "width": 131,
+      "height": 127,
+      "parent": "list_item_3"
+    },
+    {
+      "id": "icon_4",
+      "type": "image",
+      "bbox": [
+        117,
+        1256,
+        248,
+        1382
+      ],
+      "width": 131,
+      "height": 126,
+      "parent": "list_item_4"
+    },
+    {
+      "id": "icon_5",
+      "type": "image",
+      "bbox": [
+        117,
+        1547,
+        248,
+        1676
+      ],
+      "width": 131,
+      "height": 129,
+      "parent": "list_item_5"
+    },
+    {
+      "id": "icon_6",
+      "type": "image",
+      "bbox": [
+        117,
+        1841,
+        248,
+        1967
+      ],
+      "width": 131,
+      "height": 126,
+      "parent": "list_item_6"
+    },
+    {
+      "id": "icon_7",
+      "type": "image",
+      "bbox": [
+        117,
+        2134,
+        248,
+        2261
+      ],
+      "width": 131,
+      "height": 127,
+      "parent": "list_item_7"
+    },
+    {
+      "id": "icon_8",
+      "type": "image",
+      "bbox": [
+        117,
+        2426,
+        248,
+        2532
+      ],
+      "width": 131,
+      "height": 106,
+      "parent": "list_item_8"
+    },
+    {
+      "id": "text_1",
+      "type": "label",
+      "bbox": [
+        292,
+        385,
+        484,
+        441
+      ],
+      "width": 192,
+      "height": 56,
+      "parent": "list_item_1",
+      "text": "\u542c\u767d\u566a\u97f3"
+    },
+    {
+      "id": "text_2",
+      "type": "label",
+      "bbox": [
+        292,
+        456,
+        562,
+        496
+      ],
+      "width": 270,
+      "height": 40,
+      "parent": "list_item_1",
+      "text": "\u70b9\u8fd9,\u542c\u8bfe\u5802\u50ac\u7720"
+    },
+    {
+      "id": "text_3",
+      "type": "label",
+      "bbox": [
+        292,
+        679,
+        484,
+        734
+      ],
+      "width": 192,
+      "height": 55,
+      "parent": "list_item_2",
+      "text": "\u8bb0\u5f55\u7761\u7720"
+    },
+    {
+      "id": "text_4",
+      "type": "label",
+      "bbox": [
+        292,
+        747,
+        526,
+        787
+      ],
+      "width": 234,
+      "height": 40,
+      "parent": "list_item_2",
+      "text": "\u8bb0\u5f55\u68a6\u8bdd\u547c\u565c\u58f0"
+    },
+    {
+      "id": "text_5",
+      "type": "label",
+      "bbox": [
+        292,
+        972,
+        484,
+        1028
+      ],
+      "width": 192,
+      "height": 56,
+      "parent": "list_item_3",
+      "text": "\u6c89\u6d78\u5b66\u4e60"
+    },
+    {
+      "id": "text_6",
+      "type": "label",
+      "bbox": [
+        292,
+        1041,
+        426,
+        1081
+      ],
+      "width": 134,
+      "height": 40,
+      "parent": "list_item_3",
+      "text": "\u6781\u81f4\u4e13\u6ce8"
+    },
+    {
+      "id": "text_7",
+      "type": "label",
+      "bbox": [
+        292,
+        1263,
+        386,
+        1319
+      ],
+      "width": 94,
+      "height": 56,
+      "parent": "list_item_4",
+      "text": "\u95f9\u949f"
+    },
+    {
+      "id": "text_8",
+      "type": "label",
+      "bbox": [
+        292,
+        1332,
+        426,
+        1372
+      ],
+      "width": 134,
+      "height": 40,
+      "parent": "list_item_4",
+      "text": "\u65e0\u75db\u5524\u9192"
+    },
+    {
+      "id": "text_9",
+      "type": "label",
+      "bbox": [
+        292,
+        1557,
+        386,
+        1613
+      ],
+      "width": 94,
+      "height": 56,
+      "parent": "list_item_5",
+      "text": "\u5c0f\u61a9"
+    },
+    {
+      "id": "text_10",
+      "type": "label",
+      "bbox": [
+        292,
+        1626,
+        398,
+        1666
+      ],
+      "width": 106,
+      "height": 40,
+      "parent": "list_item_5",
+      "text": "15\u5206\u949f"
+    },
+    {
+      "id": "text_11",
+      "type": "label",
+      "bbox": [
+        292,
+        1848,
+        484,
+        1904
+      ],
+      "width": 192,
+      "height": 56,
+      "parent": "list_item_6",
+      "text": "\u7761\u524d\u4eea\u5f0f"
+    },
+    {
+      "id": "text_12",
+      "type": "label",
+      "bbox": [
+        292,
+        1917,
+        494,
+        1957
+      ],
+      "width": 202,
+      "height": 40,
+      "parent": "list_item_6",
+      "text": "\u4e3a\u5165\u7761\u505a\u51c6\u5907"
+    },
+    {
+      "id": "text_13",
+      "type": "label",
+      "bbox": [
+        292,
+        2142,
+        484,
+        2198
+      ],
+      "width": 192,
+      "height": 56,
+      "parent": "list_item_7",
+      "text": "\u5b81\u9759\u7a7a\u95f4"
+    },
+    {
+      "id": "text_14",
+      "type": "label",
+      "bbox": [
+        292,
+        2210,
+        426,
+        2251
+      ],
+      "width": 134,
+      "height": 41,
+      "parent": "list_item_7",
+      "text": "\u4e00\u952e\u906e\u566a"
+    },
+    {
+      "id": "text_15",
+      "type": "label",
+      "bbox": [
+        292,
+        2433,
+        484,
+        2489
+      ],
+      "width": 192,
+      "height": 56,
+      "parent": "list_item_8",
+      "text": "\u547c\u5438\u7ec3\u4e60"
+    },
+    {
+      "id": "text_16",
+      "type": "label",
+      "bbox": [
+        292,
+        2502,
+        494,
+        2532
+      ],
+      "width": 202,
+      "height": 30,
+      "parent": "list_item_8",
+      "text": "\u5feb\u901f\u8c03\u6574\u72b6\u6001"
+    },
+    {
+      "id": "drag_handle_1",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        415,
+        1047,
+        471
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_1"
+    },
+    {
+      "id": "drag_handle_2",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        709,
+        1047,
+        765
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_2"
+    },
+    {
+      "id": "drag_handle_3",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        1003,
+        1047,
+        1058
+      ],
+      "width": 55,
+      "height": 55,
+      "parent": "list_item_3"
+    },
+    {
+      "id": "drag_handle_4",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        1296,
+        1047,
+        1352
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_4"
+    },
+    {
+      "id": "drag_handle_5",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        1590,
+        1047,
+        1646
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_5"
+    },
+    {
+      "id": "drag_handle_6",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        1884,
+        1047,
+        1940
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_6"
+    },
+    {
+      "id": "drag_handle_7",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        2178,
+        1047,
+        2233
+      ],
+      "width": 55,
+      "height": 55,
+      "parent": "list_item_7"
+    },
+    {
+      "id": "drag_handle_8",
+      "type": "icon_button",
+      "bbox": [
+        992,
+        2471,
+        1047,
+        2527
+      ],
+      "width": 55,
+      "height": 56,
+      "parent": "list_item_8"
+    }
+  ],
+  "meta": {
+    "scale_x": 1.17,
+    "scale_y": 2.532,
+    "frame_w": 1000,
+    "frame_h": 1000
+  }
+}

@@ -1,0 +1,578 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1080,
+        58
+      ],
+      "width": 1080,
+      "height": 58
+    },
+    {
+      "id": "toolbar",
+      "type": "toolbar",
+      "bbox": [
+        375,
+        6,
+        630,
+        34
+      ],
+      "width": 255,
+      "height": 28,
+      "text": "uinoes.com"
+    },
+    {
+      "id": "container_main",
+      "type": "container",
+      "bbox": [
+        0,
+        58,
+        1080,
+        1000
+      ],
+      "width": 1080,
+      "height": 942
+    },
+    {
+      "id": "container_grid",
+      "type": "container",
+      "bbox": [
+        58,
+        52,
+        942,
+        267
+      ],
+      "width": 884,
+      "height": 215
+    },
+    {
+      "id": "icon_button_sleep_relax",
+      "type": "icon_button",
+      "bbox": [
+        96,
+        72,
+        222,
+        139
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u8212\u7720\u653e\u677e"
+    },
+    {
+      "id": "icon_button_daily_dream",
+      "type": "icon_button",
+      "bbox": [
+        264,
+        72,
+        390,
+        139
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u6bcf\u65e5\u68a6\u5883"
+    },
+    {
+      "id": "icon_button_stars_sleep",
+      "type": "icon_button",
+      "bbox": [
+        432,
+        72,
+        558,
+        139
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u660e\u661f\u54c4\u7761"
+    },
+    {
+      "id": "icon_button_free_mind",
+      "type": "icon_button",
+      "bbox": [
+        599,
+        72,
+        725,
+        139
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u81ea\u5728\u6b63\u5ff5"
+    },
+    {
+      "id": "icon_button_sleep_partner",
+      "type": "icon_button",
+      "bbox": [
+        767,
+        72,
+        893,
+        139
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u7761\u89c9\u642d\u5b50"
+    },
+    {
+      "id": "icon_button_bedtime_story",
+      "type": "icon_button",
+      "bbox": [
+        96,
+        172,
+        222,
+        239
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u7761\u524d\u6545\u4e8b"
+    },
+    {
+      "id": "icon_button\u51a5\u60f3\u4e13\u9898",
+      "type": "icon_button",
+      "bbox": [
+        264,
+        172,
+        390,
+        239
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u51a5\u60f3\u4e13\u9898"
+    },
+    {
+      "id": "icon_button_immersive_learning",
+      "type": "icon_button",
+      "bbox": [
+        432,
+        172,
+        558,
+        239
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u6c89\u6d78\u5b66\u4e60"
+    },
+    {
+      "id": "icon_button_psychological_test",
+      "type": "icon_button",
+      "bbox": [
+        599,
+        172,
+        725,
+        239
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u5fc3\u7406\u6d4b\u8bc4"
+    },
+    {
+      "id": "icon_button_sign_in_benefits",
+      "type": "icon_button",
+      "bbox": [
+        767,
+        172,
+        893,
+        239
+      ],
+      "width": 126,
+      "height": 67,
+      "text": "\u7b7e\u5230\u798f\u5229"
+    },
+    {
+      "id": "indicator_pagination",
+      "type": "indicator",
+      "bbox": [
+        470,
+        248,
+        530,
+        259
+      ],
+      "width": 60,
+      "height": 11,
+      "parent": "container_grid"
+    },
+    {
+      "id": "label_meng_meng_sunday",
+      "type": "label",
+      "bbox": [
+        58,
+        298,
+        352,
+        332
+      ],
+      "width": 294,
+      "height": 34,
+      "text": "\u2764\ufe0f\u7f8e\u68a6\u661f\u671f\u5929"
+    },
+    {
+      "id": "label_audio_update",
+      "type": "label",
+      "bbox": [
+        390,
+        304,
+        584,
+        326
+      ],
+      "width": 194,
+      "height": 22,
+      "text": "\u97f3\u9891\u4e0a\u65b0"
+    },
+    {
+      "id": "label_view_dream",
+      "type": "label",
+      "bbox": [
+        658,
+        304,
+        802,
+        326
+      ],
+      "width": 144,
+      "height": 22,
+      "text": "\u56f4\u89c2\u68a6\u5883"
+    },
+    {
+      "id": "label_assessment",
+      "type": "label",
+      "bbox": [
+        874,
+        304,
+        942,
+        326
+      ],
+      "width": 68,
+      "height": 22,
+      "text": "\u6d4b\u8bc4"
+    },
+    {
+      "id": "card_sleep_together",
+      "type": "card",
+      "bbox": [
+        58,
+        358,
+        714,
+        444
+      ],
+      "width": 656,
+      "height": 86
+    },
+    {
+      "id": "label_sleep_together_title",
+      "type": "label",
+      "bbox": [
+        270,
+        375,
+        714,
+        400
+      ],
+      "width": 444,
+      "height": 25,
+      "text": "\u4eca\u665a\uff0c\u4e00\u8d77\u3010\u4e91\u3011\u7761\u89c9"
+    },
+    {
+      "id": "label_sleep_together_subtitle",
+      "type": "label",
+      "bbox": [
+        270,
+        408,
+        676,
+        426
+      ],
+      "width": 406,
+      "height": 18,
+      "text": "7\u5929\u4e0d\u71ac\u591c\u6311\u6218 \u8d62\u9ad8\u7ea7\u9694\u79bb\u971c"
+    },
+    {
+      "id": "card_weekly_limit_free",
+      "type": "card",
+      "bbox": [
+        58,
+        458,
+        520,
+        544
+      ],
+      "width": 462,
+      "height": 86
+    },
+    {
+      "id": "label_weekly_limit_free_title",
+      "type": "label",
+      "bbox": [
+        270,
+        477,
+        520,
+        501
+      ],
+      "width": 250,
+      "height": 25,
+      "text": "\u672c\u5468\u9650\u514d\u64ad\u5355"
+    },
+    {
+      "id": "label_weekly_limit_free_duration",
+      "type": "label",
+      "bbox": [
+        270,
+        510,
+        390,
+        527
+      ],
+      "width": 120,
+      "height": 18,
+      "text": "148\u5206\u949f"
+    },
+    {
+      "id": "card_unlock_magic_egg",
+      "type": "card",
+      "bbox": [
+        58,
+        558,
+        584,
+        645
+      ],
+      "width": 526,
+      "height": 87
+    },
+    {
+      "id": "label_unlock_magic_egg_title",
+      "type": "label",
+      "bbox": [
+        328,
+        577,
+        584,
+        601
+      ],
+      "width": 256,
+      "height": 25,
+      "text": "\u2728\u89e3\u9501\u7f8e\u68a6\u5f69\u86cb"
+    },
+    {
+      "id": "label_unlock_magic_egg_subtitle",
+      "type": "label",
+      "bbox": [
+        270,
+        610,
+        576,
+        627
+      ],
+      "width": 306,
+      "height": 18,
+      "text": "\u661f\u671f\u5929\u665a7\u70b9\u51c6\u65f6\u9650\u514d"
+    },
+    {
+      "id": "label_selected_white_noise",
+      "type": "label",
+      "bbox": [
+        58,
+        698,
+        294,
+        723
+      ],
+      "width": 236,
+      "height": 34,
+      "text": "\u7cbe\u9009\u767d\u566a\u97f3"
+    },
+    {
+      "id": "button_more",
+      "type": "button",
+      "bbox": [
+        870,
+        698,
+        942,
+        723
+      ],
+      "width": 72,
+      "height": 25,
+      "text": "\u66f4\u591a"
+    },
+    {
+      "id": "card_white_noise_1",
+      "type": "card",
+      "bbox": [
+        58,
+        745,
+        432,
+        841
+      ],
+      "width": 374,
+      "height": 96
+    },
+    {
+      "id": "card_white_noise_2",
+      "type": "card",
+      "bbox": [
+        460,
+        745,
+        834,
+        841
+      ],
+      "width": 374,
+      "height": 96
+    },
+    {
+      "id": "card_white_noise_3",
+      "type": "card",
+      "bbox": [
+        862,
+        745,
+        1080,
+        841
+      ],
+      "width": 218,
+      "height": 96
+    },
+    {
+      "id": "container_player",
+      "type": "container",
+      "bbox": [
+        58,
+        847,
+        1080,
+        900
+      ],
+      "width": 1022,
+      "height": 53
+    },
+    {
+      "id": "icon_player",
+      "type": "icon",
+      "bbox": [
+        58,
+        851,
+        158,
+        896
+      ],
+      "width": 100,
+      "height": 45,
+      "parent": "container_player"
+    },
+    {
+      "id": "label_player_title",
+      "type": "label",
+      "bbox": [
+        178,
+        855,
+        278,
+        873
+      ],
+      "width": 100,
+      "height": 18,
+      "text": "\u767d\u566a\u97f3"
+    },
+    {
+      "id": "label_player_subtitle",
+      "type": "label",
+      "bbox": [
+        178,
+        877,
+        540,
+        891
+      ],
+      "width": 362,
+      "height": 14,
+      "text": "\u591c\u866b\u5527\u5527 | \u7ea2\u6ce5\u5c0f\u7089 | \u96e8\u6253\u82ad\u8549"
+    },
+    {
+      "id": "button_player_play",
+      "type": "button",
+      "bbox": [
+        770,
+        857,
+        842,
+        890
+      ],
+      "width": 72,
+      "height": 33,
+      "parent": "container_player"
+    },
+    {
+      "id": "button_player_list",
+      "type": "button",
+      "bbox": [
+        884,
+        863,
+        942,
+        885
+      ],
+      "width": 58,
+      "height": 22,
+      "parent": "container_player"
+    },
+    {
+      "id": "tabbar",
+      "type": "tabbar",
+      "bbox": [
+        0,
+        900,
+        1080,
+        999
+      ],
+      "width": 1080,
+      "height": 99
+    },
+    {
+      "id": "tab_home",
+      "type": "tab",
+      "bbox": [
+        0,
+        900,
+        180,
+        999
+      ],
+      "width": 180,
+      "height": 99,
+      "text": "\u9996\u9875"
+    },
+    {
+      "id": "tab_community",
+      "type": "tab",
+      "bbox": [
+        216,
+        900,
+        396,
+        999
+      ],
+      "width": 180,
+      "height": 99,
+      "text": "\u793e\u533a"
+    },
+    {
+      "id": "tab_sleep",
+      "type": "tab",
+      "bbox": [
+        432,
+        900,
+        612,
+        999
+      ],
+      "width": 180,
+      "height": 99,
+      "text": "\u7761\u89c9"
+    },
+    {
+      "id": "tab_training",
+      "type": "tab",
+      "bbox": [
+        648,
+        900,
+        828,
+        999
+      ],
+      "width": 180,
+      "height": 99,
+      "text": "\u8bad\u7ec3"
+    },
+    {
+      "id": "tab_profile",
+      "type": "tab",
+      "bbox": [
+        864,
+        900,
+        1044,
+        999
+      ],
+      "width": 180,
+      "height": 99,
+      "text": "\u6211\u7684"
+    }
+  ]
+}

@@ -1,0 +1,843 @@
+{
+  "components": [
+    {
+      "id": "status_bar",
+      "type": "status_bar",
+      "bbox": [
+        0,
+        0,
+        1170,
+        147
+      ],
+      "width": 1170,
+      "height": 147
+    },
+    {
+      "id": "back_button",
+      "type": "button",
+      "bbox": [
+        50,
+        147,
+        115,
+        243
+      ],
+      "width": 65,
+      "height": 96,
+      "parent": "toolbar"
+    },
+    {
+      "id": "title_label",
+      "type": "label",
+      "bbox": [
+        149,
+        157,
+        590,
+        223
+      ],
+      "width": 441,
+      "height": 66,
+      "parent": "toolbar",
+      "text": "\u4fdd\u5229\u5efa\u53d1\u5370\u8c61\u9752\u57ce"
+    },
+    {
+      "id": "toolbar",
+      "type": "toolbar",
+      "bbox": [
+        0,
+        147,
+        1170,
+        263
+      ],
+      "width": 1170,
+      "height": 116,
+      "parent": "root"
+    },
+    {
+      "id": "search_icon",
+      "type": "icon_button",
+      "bbox": [
+        738,
+        152,
+        807,
+        238
+      ],
+      "width": 69,
+      "height": 86,
+      "parent": "toolbar"
+    },
+    {
+      "id": "share_icon",
+      "type": "icon_button",
+      "bbox": [
+        847,
+        152,
+        913,
+        238
+      ],
+      "width": 66,
+      "height": 86,
+      "parent": "toolbar"
+    },
+    {
+      "id": "compare_icon",
+      "type": "icon_button",
+      "bbox": [
+        952,
+        152,
+        1021,
+        238
+      ],
+      "width": 69,
+      "height": 86,
+      "parent": "toolbar"
+    },
+    {
+      "id": "notifications_icon",
+      "type": "icon_button",
+      "bbox": [
+        1061,
+        152,
+        1130,
+        238
+      ],
+      "width": 69,
+      "height": 86,
+      "parent": "toolbar"
+    },
+    {
+      "id": "notifications_badge",
+      "type": "badge",
+      "bbox": [
+        1097,
+        139,
+        1144,
+        190
+      ],
+      "width": 47,
+      "height": 51,
+      "parent": "notifications_icon",
+      "text": "4"
+    },
+    {
+      "id": "tabbar",
+      "type": "tabbar",
+      "bbox": [
+        0,
+        263,
+        1170,
+        375
+      ],
+      "width": 1170,
+      "height": 112,
+      "parent": "root"
+    },
+    {
+      "id": "tab_base_info",
+      "type": "tab",
+      "bbox": [
+        50,
+        263,
+        253,
+        375
+      ],
+      "width": 203,
+      "height": 112,
+      "parent": "tabbar",
+      "text": "\u57fa\u7840\u4fe1\u606f"
+    },
+    {
+      "id": "tab_unit_type",
+      "type": "tab",
+      "bbox": [
+        365,
+        263,
+        470,
+        375
+      ],
+      "width": 105,
+      "height": 112,
+      "parent": "tabbar",
+      "text": "\u6237\u578b"
+    },
+    {
+      "id": "tab_surroundings",
+      "type": "tab",
+      "bbox": [
+        580,
+        263,
+        683,
+        375
+      ],
+      "width": 103,
+      "height": 112,
+      "parent": "tabbar",
+      "text": "\u5468\u8fb9"
+    },
+    {
+      "id": "tab_reviews",
+      "type": "tab",
+      "bbox": [
+        796,
+        263,
+        899,
+        375
+      ],
+      "width": 103,
+      "height": 112,
+      "parent": "tabbar",
+      "text": "\u70b9\u8bc4"
+    },
+    {
+      "id": "tab_recommendations",
+      "type": "tab",
+      "bbox": [
+        1011,
+        263,
+        1114,
+        375
+      ],
+      "width": 103,
+      "height": 112,
+      "parent": "tabbar",
+      "text": "\u63a8\u8350"
+    },
+    {
+      "id": "card_loupan_dynamic",
+      "type": "card",
+      "bbox": [
+        32,
+        395,
+        1170,
+        1362
+      ],
+      "width": 1138,
+      "height": 967,
+      "parent": "root"
+    },
+    {
+      "id": "title_loupan_dynamic",
+      "type": "label",
+      "bbox": [
+        56,
+        451,
+        276,
+        517
+      ],
+      "width": 220,
+      "height": 66,
+      "parent": "card_loupan_dynamic",
+      "text": "\u697c\u76d8\u52a8\u6001"
+    },
+    {
+      "id": "button_view_more",
+      "type": "button",
+      "bbox": [
+        927,
+        461,
+        1109,
+        506
+      ],
+      "width": 182,
+      "height": 45,
+      "parent": "card_loupan_dynamic",
+      "text": "\u67e5\u770b\u66f4\u591a>"
+    },
+    {
+      "id": "tab_phase_one",
+      "type": "tab",
+      "bbox": [
+        56,
+        552,
+        157,
+        628
+      ],
+      "width": 101,
+      "height": 76,
+      "parent": "card_loupan_dynamic",
+      "text": "\u4e00\u671f"
+    },
+    {
+      "id": "tab_phase_two",
+      "type": "tab",
+      "bbox": [
+        250,
+        552,
+        351,
+        628
+      ],
+      "width": 101,
+      "height": 76,
+      "parent": "card_loupan_dynamic",
+      "text": "\u4e8c\u671f"
+    },
+    {
+      "id": "timeline",
+      "type": "list",
+      "bbox": [
+        56,
+        684,
+        1109,
+        828
+      ],
+      "width": 1053,
+      "height": 144,
+      "parent": "card_loupan_dynamic"
+    },
+    {
+      "id": "timeline_item_cert",
+      "type": "list_item",
+      "bbox": [
+        56,
+        684,
+        234,
+        828
+      ],
+      "width": 178,
+      "height": 144,
+      "parent": "timeline",
+      "text": "\u8bc1\n3.11.08"
+    },
+    {
+      "id": "timeline_item_purchase",
+      "type": "list_item",
+      "bbox": [
+        250,
+        684,
+        524,
+        828
+      ],
+      "width": 274,
+      "height": 144,
+      "parent": "timeline",
+      "text": "\u8ba4\u8d2d\n2023.11.10-..."
+    },
+    {
+      "id": "timeline_item_launch",
+      "type": "list_item",
+      "bbox": [
+        541,
+        684,
+        814,
+        828
+      ],
+      "width": 273,
+      "height": 144,
+      "parent": "timeline",
+      "text": "\u5f00\u76d8\n2023.11.23"
+    },
+    {
+      "id": "timeline_item_select",
+      "type": "list_item",
+      "bbox": [
+        831,
+        684,
+        1104,
+        828
+      ],
+      "width": 273,
+      "height": 144,
+      "parent": "timeline",
+      "text": "\u9009\u623f\n2023.11.23-..."
+    },
+    {
+      "id": "label_construction_progress",
+      "type": "label",
+      "bbox": [
+        56,
+        876,
+        227,
+        929
+      ],
+      "width": 171,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u65bd\u5de5\u8fdb\u5ea6"
+    },
+    {
+      "id": "text_construction_progress",
+      "type": "text",
+      "bbox": [
+        260,
+        876,
+        388,
+        929
+      ],
+      "width": 128,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u5728\u5efa\u4e2d"
+    },
+    {
+      "id": "label_price",
+      "type": "label",
+      "bbox": [
+        56,
+        957,
+        227,
+        1013
+      ],
+      "width": 171,
+      "height": 56,
+      "parent": "card_loupan_dynamic",
+      "text": "\u4f4f\u5b85\u4ef7\u683c"
+    },
+    {
+      "id": "text_price",
+      "type": "text",
+      "bbox": [
+        266,
+        957,
+        509,
+        1013
+      ],
+      "width": 243,
+      "height": 56,
+      "parent": "card_loupan_dynamic",
+      "text": "46000\u5143/\u33a1"
+    },
+    {
+      "id": "text_price_range",
+      "type": "text",
+      "bbox": [
+        545,
+        957,
+        885,
+        1013
+      ],
+      "width": 340,
+      "height": 56,
+      "parent": "card_loupan_dynamic",
+      "text": "358-659\u4e07\u5143/\u5957"
+    },
+    {
+      "id": "icon_info_price",
+      "type": "icon",
+      "bbox": [
+        903,
+        967,
+        934,
+        1005
+      ],
+      "width": 31,
+      "height": 38,
+      "parent": "card_loupan_dynamic"
+    },
+    {
+      "id": "label_launch_buildings",
+      "type": "label",
+      "bbox": [
+        56,
+        1041,
+        227,
+        1094
+      ],
+      "width": 171,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u5f00\u76d8\u697c\u680b"
+    },
+    {
+      "id": "text_launch_buildings",
+      "type": "text",
+      "bbox": [
+        260,
+        1041,
+        686,
+        1094
+      ],
+      "width": 426,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "1#, 2#, 3#, 5#, 6#"
+    },
+    {
+      "id": "label_launch_units",
+      "type": "label",
+      "bbox": [
+        56,
+        1124,
+        227,
+        1177
+      ],
+      "width": 171,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u5f00\u76d8\u6237\u578b"
+    },
+    {
+      "id": "text_launch_units",
+      "type": "text",
+      "bbox": [
+        260,
+        1124,
+        1100,
+        1177
+      ],
+      "width": 840,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "3\u5ba42\u53852\u536b 99\u33a1, 3\u5ba42\u53852\u536b 99\u33a1, 4..."
+    },
+    {
+      "id": "label_purchase_conditions",
+      "type": "label",
+      "bbox": [
+        56,
+        1205,
+        227,
+        1258
+      ],
+      "width": 171,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u8ba4\u8d2d\u6761\u4ef6"
+    },
+    {
+      "id": "text_purchase_conditions",
+      "type": "text",
+      "bbox": [
+        260,
+        1205,
+        835,
+        1258
+      ],
+      "width": 575,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u4e2a\u4eba30\u4e07, \u4f01\u4e1a100\u4e07\u8ba4\u8d2d\u91d1"
+    },
+    {
+      "id": "label_purchase_amount",
+      "type": "label",
+      "bbox": [
+        56,
+        1286,
+        227,
+        1339
+      ],
+      "width": 171,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "\u8ba4\u8d2d\u91d1\u989d"
+    },
+    {
+      "id": "text_purchase_amount",
+      "type": "text",
+      "bbox": [
+        260,
+        1286,
+        360,
+        1339
+      ],
+      "width": 100,
+      "height": 53,
+      "parent": "card_loupan_dynamic",
+      "text": "30\u4e07"
+    },
+    {
+      "id": "stat_total_units",
+      "type": "label",
+      "bbox": [
+        80,
+        1388,
+        227,
+        1504
+      ],
+      "width": 147,
+      "height": 116,
+      "parent": "card_loupan_dynamic",
+      "text": "324\n\u603b\u623f\u6e90\u6570"
+    },
+    {
+      "id": "stat_ratio",
+      "type": "label",
+      "bbox": [
+        360,
+        1388,
+        524,
+        1504
+      ],
+      "width": 164,
+      "height": 116,
+      "parent": "card_loupan_dynamic",
+      "text": "1: 1.8\n\u5165\u56f4\u6bd4 \u2460"
+    },
+    {
+      "id": "stat_social_security",
+      "type": "label",
+      "bbox": [
+        629,
+        1388,
+        824,
+        1504
+      ],
+      "width": 195,
+      "height": 116,
+      "parent": "card_loupan_dynamic",
+      "text": "0.1\n\u793e\u4fdd\u7cfb\u6570 \u2460"
+    },
+    {
+      "id": "card_latest_update",
+      "type": "card",
+      "bbox": [
+        56,
+        1608,
+        1109,
+        1734
+      ],
+      "width": 1053,
+      "height": 126,
+      "parent": "root"
+    },
+    {
+      "id": "label_latest_update",
+      "type": "label",
+      "bbox": [
+        58,
+        1623,
+        220,
+        1666
+      ],
+      "width": 162,
+      "height": 43,
+      "parent": "card_latest_update",
+      "text": "\u6700\u65b0\u52a8\u6001"
+    },
+    {
+      "id": "text_latest_update",
+      "type": "text",
+      "bbox": [
+        241,
+        1620,
+        1100,
+        1729
+      ],
+      "width": 859,
+      "height": 109,
+      "parent": "card_latest_update",
+      "text": "\u4f4d\u4e8e\u4e0a\u6d77\u9752\u6d66\u7684\u4fdd\u5229\u5efa\u53d1\u5370\u8c61\u9752\u57ce\u4e8c\u671f2023\u5e7412\u6708\u5f00\u76d8\u4ee5\u4e0a\u4fe1\u606f\u4ec5\u4f9b\u53c2\u8003\uff0c\u5177\u4f53\u4fe1\u606f\u4ee5\u552e\u697c\u5904\u516c\u5e03"
+    },
+    {
+      "id": "button_subscribe",
+      "type": "button",
+      "bbox": [
+        56,
+        1790,
+        1109,
+        1907
+      ],
+      "width": 1053,
+      "height": 117,
+      "parent": "root",
+      "text": "\u8ba2\u9605\u697c\u76d8\u52a8\u6001"
+    },
+    {
+      "id": "button_question_1",
+      "type": "button",
+      "bbox": [
+        56,
+        1962,
+        421,
+        2015
+      ],
+      "width": 365,
+      "height": 53,
+      "parent": "root",
+      "text": "\u5373\u5c06\u5f00\u76d8\u4ec0\u4e48\u6237\u578b?"
+    },
+    {
+      "id": "button_question_2",
+      "type": "button",
+      "bbox": [
+        454,
+        1962,
+        644,
+        2015
+      ],
+      "width": 190,
+      "height": 53,
+      "parent": "root",
+      "text": "13% \u54a8\u8be2 >"
+    },
+    {
+      "id": "button_question_3",
+      "type": "button",
+      "bbox": [
+        718,
+        1962,
+        1109,
+        2015
+      ],
+      "width": 391,
+      "height": 53,
+      "parent": "root",
+      "text": "\u697c\u76d8\u4ed8\u6b3e\u65b9\u5f0f\u6709\u54ea\u4e9b?"
+    },
+    {
+      "id": "card_sand_table",
+      "type": "card",
+      "bbox": [
+        32,
+        2104,
+        1170,
+        2253
+      ],
+      "width": 1138,
+      "height": 149,
+      "parent": "root"
+    },
+    {
+      "id": "title_sand_table",
+      "type": "label",
+      "bbox": [
+        56,
+        2160,
+        220,
+        2221
+      ],
+      "width": 164,
+      "height": 61,
+      "parent": "card_sand_table",
+      "text": "\u6c99\u76d8\u56fe"
+    },
+    {
+      "id": "button_view_all_buildings",
+      "type": "button",
+      "bbox": [
+        852,
+        2167,
+        1109,
+        2213
+      ],
+      "width": 257,
+      "height": 46,
+      "parent": "card_sand_table",
+      "text": "\u67e5\u770b\u5168\u90e8\u697c\u680b >"
+    },
+    {
+      "id": "button_save",
+      "type": "icon_button",
+      "bbox": [
+        56,
+        2291,
+        157,
+        2418
+      ],
+      "width": 101,
+      "height": 127,
+      "parent": "root"
+    },
+    {
+      "id": "button_book_viewing",
+      "type": "icon_button",
+      "bbox": [
+        201,
+        2291,
+        365,
+        2418
+      ],
+      "width": 164,
+      "height": 127,
+      "parent": "root"
+    },
+    {
+      "id": "button_chat",
+      "type": "button",
+      "bbox": [
+        405,
+        2291,
+        765,
+        2418
+      ],
+      "width": 360,
+      "height": 127,
+      "parent": "root",
+      "text": "\u5fae\u804a\n\u5feb\u901f\u5728\u7ebf\u54a8\u8be2"
+    },
+    {
+      "id": "button_contact_agent",
+      "type": "button",
+      "bbox": [
+        784,
+        2291,
+        1144,
+        2418
+      ],
+      "width": 360,
+      "height": 127,
+      "parent": "root",
+      "text": "\u81f4\u7535\u8d2d\u623f\u987e\u95ee\n\u4fdd\u62a4\u4f60\u7684\u771f\u5b9e\u53f7\u7801"
+    },
+    {
+      "id": "icon_heart",
+      "type": "icon",
+      "bbox": [
+        68,
+        2302,
+        138,
+        2362
+      ],
+      "width": 70,
+      "height": 60,
+      "parent": "button_save"
+    },
+    {
+      "id": "icon_calendar",
+      "type": "icon",
+      "bbox": [
+        248,
+        2302,
+        318,
+        2362
+      ],
+      "width": 70,
+      "height": 60,
+      "parent": "button_book_viewing"
+    },
+    {
+      "id": "icon_car",
+      "type": "icon",
+      "bbox": [
+        292,
+        2284,
+        360,
+        2324
+      ],
+      "width": 68,
+      "height": 40,
+      "parent": "button_book_viewing"
+    },
+    {
+      "id": "icon_microphone",
+      "type": "icon",
+      "bbox": [
+        534,
+        2307,
+        622,
+        2357
+      ],
+      "width": 88,
+      "height": 50,
+      "parent": "button_chat"
+    },
+    {
+      "id": "icon_phone",
+      "type": "icon",
+      "bbox": [
+        819,
+        2307,
+        908,
+        2357
+      ],
+      "width": 89,
+      "height": 50,
+      "parent": "button_contact_agent"
+    }
+  ],
+  "meta": {
+    "scale_x": 1.17,
+    "scale_y": 2.532,
+    "frame_w": 1000,
+    "frame_h": 1000
+  }
+}
