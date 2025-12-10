@@ -9,10 +9,12 @@ version = "0.1.0"
 [dependencies]
 python = "<=3.13"
 yarn = ">=4.12.0,<5"
+pip = ">=25.3,<26"
 
 [pypi-options]
 index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-extra-index-urls = ["https://pypi.org/simple"]
+extra-index-urls = ["https://pypi.org/simple",
+"https://download.pytorch.org/whl/cu130"]
 
 [pypi-dependencies]
 langgraph-cli = { version = ">=0.4.7, <0.5", extras = ["inmem"] }
@@ -27,3 +29,11 @@ pydantic = ">=2.12.5, <3"
 jupyter = ">=1.1.1, <2"
 httpx = ">=0.28.1, <0.29"
 python-dotenv = ">=1.2.1, <2"
+transformers = "==4.47.0"
+pillow = ">=12.0.0, <13"
+addict = ">=2.4.0, <3"
+matplotlib = ">=3.10.7, <4"
+torchvision = ">=0.24.1, <0.25"
+einops = ">=0.8.1, <0.9"
+easydict = ">=1.13, <2"
+opencv-python = ">=4.12.0.88, <5"

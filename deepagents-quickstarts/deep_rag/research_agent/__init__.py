@@ -9,10 +9,15 @@ from research_agent.prompts import (
     RESEARCH_WORKFLOW_INSTRUCTIONS,
     SUBAGENT_DELEGATION_INSTRUCTIONS,
 )
-from research_agent.tools import scrape_news_site, think_tool
+from research_agent.tools import (
+    list_uploaded_files,
+    retrieve_uploaded_context,
+    think_tool,
+)
 
 __all__ = [
-    "scrape_news_site",
+    "list_uploaded_files",
+    "retrieve_uploaded_context",
     "think_tool",
     "RESEARCHER_INSTRUCTIONS",
     "RESEARCH_WORKFLOW_INSTRUCTIONS",

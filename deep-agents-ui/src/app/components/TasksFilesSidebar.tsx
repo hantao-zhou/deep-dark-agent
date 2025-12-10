@@ -19,14 +19,19 @@ import type { TodoItem, FileItem } from "@/app/types/types";
 import { useChatContext } from "@/providers/ChatProvider";
 import { cn } from "@/lib/utils";
 import { FileViewDialog } from "@/app/components/FileViewDialog";
+import { FileUploadButton } from "@/app/components/FileUploadButton";
 
 export function FilesPopover({
   files,
   setFiles,
+  groundingFiles,
+  setGroundingFiles,
   editDisabled,
 }: {
-  files: Record<string, string>;
-  setFiles: (files: Record<string, string>) => Promise<void>;
+  files: Record<string, any>;
+  setFiles: (files: Record<string, any>) => Promise<void>;
+  groundingFiles: string[];
+  setGroundingFiles: (files: string[]) => Promise<void>;
   editDisabled: boolean;
 }) {
   const [selectedFile, setSelectedFile] = useState<FileItem | null>(null);
@@ -39,11 +44,46 @@ export function FilesPopover({
     [files, setFiles]
   );
 
+  const handleUploaded = useCallback(
+    async (fileName: string) => {
+      const next = Array.from(new Set([...groundingFiles, fileName]));
+      await setGroundingFiles(next);
+    },
+    [groundingFiles, setGroundingFiles]
+  );
+
+  const toggleGrounding = useCallback(
+    async (fileName: string) => {
+      if (editDisabled) return;
+      const isSelected = groundingFiles.includes(fileName);
+      const next = isSelected
+        ? groundingFiles.filter((f) => f !== fileName)
+        : [...groundingFiles, fileName];
+      await setGroundingFiles(next);
+    },
+    [editDisabled, groundingFiles, setGroundingFiles]
+  );
+
   return (
     <>
+      <div className="mb-3 flex items-center justify-between gap-2">
+        <p className="text-xs text-muted-foreground">
+          Upload text/markdown/CSV/JSON files and select them for grounding.
+        </p>
+        <FileUploadButton
+          onUploaded={handleUploaded}
+          setFiles={setFiles}
+          files={files}
+          accept=".txt,.md,.markdown,.json,.csv"
+          disabled={editDisabled}
+        />
+      </div>
+
       {Object.keys(files).length === 0 ? (
-        <div className="flex h-full items-center justify-center p-4 text-center">
-          <p className="text-xs text-muted-foreground">No files created yet</p>
+        <div className="flex h-full items-center justify-center rounded-md border border-dashed border-border p-4 text-center">
+          <p className="text-xs text-muted-foreground">
+            No files yet. Upload one to start grounding answers.
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(256px,1fr))] gap-2">
@@ -65,6 +105,7 @@ export function FilesPopover({
             } else {
               fileContent = String(rawContent || "");
             }
+            const isSelected = groundingFiles.includes(filePath);
 
             return (
               <button
@@ -73,7 +114,7 @@ export function FilesPopover({
                 onClick={() =>
                   setSelectedFile({ path: filePath, content: fileContent })
                 }
-                className="cursor-pointer space-y-1 truncate rounded-md border border-border px-2 py-3 shadow-sm transition-colors"
+                className="cursor-pointer space-y-1 truncate rounded-md border border-border px-3 py-3 shadow-sm transition-colors"
                 style={{
                   backgroundColor: "var(--color-file-button)",
                 }}
@@ -86,13 +127,31 @@ export function FilesPopover({
                     "var(--color-file-button)";
                 }}
               >
-                <FileText
-                  size={24}
-                  className="mx-auto text-muted-foreground"
-                />
-                <span className="mx-auto block w-full truncate break-words text-center text-sm leading-relaxed text-foreground">
+                <div className="flex items-center justify-between gap-2">
+                  <FileText
+                    size={24}
+                    className="text-muted-foreground"
+                  />
+                  <label className="flex items-center gap-1 text-[11px] text-foreground">
+                    <input
+                      type="checkbox"
+                      checked={isSelected}
+                      onClick={(event) => event.stopPropagation()}
+                      onChange={() => toggleGrounding(filePath)}
+                      disabled={editDisabled}
+                      className="h-3.5 w-3.5 accent-foreground"
+                    />
+                    Ground
+                  </label>
+                </div>
+                <span className="mx-auto block w-full truncate break-words text-left text-sm leading-relaxed text-foreground">
                   {filePath}
                 </span>
+                {isSelected && (
+                  <span className="text-[10px] uppercase tracking-wide text-emerald-600">
+                    Selected for grounding
+                  </span>
+                )}
               </button>
             );
           })}
@@ -113,9 +172,11 @@ export function FilesPopover({
 
 export const TasksFilesSidebar = React.memo<{
   todos: TodoItem[];
-  files: Record<string, string>;
-  setFiles: (files: Record<string, string>) => Promise<void>;
-}>(({ todos, files, setFiles }) => {
+  files: Record<string, any>;
+  setFiles: (files: Record<string, any>) => Promise<void>;
+  groundingFiles: string[];
+  setGroundingFiles: (files: string[]) => Promise<void>;
+}>(({ todos, files, setFiles, groundingFiles, setGroundingFiles }) => {
   const { isLoading, interrupt } = useChatContext();
   const [tasksOpen, setTasksOpen] = useState(false);
   const [filesOpen, setFilesOpen] = useState(false);
@@ -254,6 +315,8 @@ export const TasksFilesSidebar = React.memo<{
             <FilesPopover
               files={files}
               setFiles={setFiles}
+              groundingFiles={groundingFiles}
+              setGroundingFiles={setGroundingFiles}
               editDisabled={isLoading === true || interrupt !== undefined}
             />
           )}

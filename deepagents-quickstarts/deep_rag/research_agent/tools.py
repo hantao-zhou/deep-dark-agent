@@ -1,128 +1,170 @@
-"""Research tools focused on scraping news websites."""
+"""RAG tools for answering questions against uploaded files."""
 
-from urllib.parse import urljoin
+import os
+from pathlib import Path
+from typing import Iterable, Sequence
 
-import httpx
-from bs4 import BeautifulSoup
+from langchain_core.documents import Document
 from langchain_core.tools import InjectedToolArg, tool
-from markdownify import markdownify
+from langchain_core.vectorstores import InMemoryVectorStore
+from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from typing_extensions import Annotated
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-    )
-}
+DEFAULT_UPLOAD_DIR = Path(
+    os.getenv("UPLOAD_DIR", Path(__file__).resolve().parents[3] / "uploads")
+)
+MAX_FILE_BYTES = 15 * 1024 * 1024  # 15 MB
+EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
+EMBEDDING_BASE_URL = os.getenv("EMBEDDING_BASE_URL")
+EMBEDDING_API_KEY = os.getenv("EMBEDDING_API_KEY")
 
 
-def _fetch_html(url: str, timeout: float) -> tuple[str | None, str | None]:
-    """Fetch raw HTML from a URL."""
+def _load_text_files(
+    upload_dir: Path, only: Sequence[str] | None = None
+) -> list[Document]:
+    """Load text-like files from disk into Document objects."""
+    if not upload_dir.exists():
+        return []
+
+    allowlist = {name.lower() for name in only} if only else None
+    documents: list[Document] = []
+    splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=200)
+
+    for path in sorted(upload_dir.iterdir()):
+        if not path.is_file():
+            continue
+
+        if allowlist and path.name.lower() not in allowlist:
+            continue
+
+        if path.suffix.lower() not in {".txt", ".md", ".markdown", ".json", ".csv"}:
+            continue
+
+        try:
+            size_bytes = path.stat().st_size
+            if size_bytes > MAX_FILE_BYTES:
+                continue
+
+            content = path.read_text(encoding="utf-8", errors="ignore")
+            if not content.strip():
+                continue
+
+            base_doc = Document(
+                page_content=content,
+                metadata={
+                    "source": path.name,
+                    "path": str(path),
+                    "bytes": size_bytes,
+                },
+            )
+            documents.extend(splitter.split_documents([base_doc]))
+        except Exception:
+            continue
+
+    return documents
+
+
+def _build_vector_store(docs: Iterable[Document]) -> InMemoryVectorStore | None:
+    """Create an in-memory vector store from the provided documents."""
+    docs_list = list(docs)
+    if not docs_list:
+        return None
+
+    if not EMBEDDING_MODEL:
+        return None
+
     try:
-        response = httpx.get(url, headers=HEADERS, timeout=timeout, follow_redirects=True)
-        response.raise_for_status()
-        return response.text, None
-    except Exception as exc:  # noqa: BLE001
-        return None, f"Error fetching {url}: {exc}"
-
-
-def _extract_article_links(
-    html: str, base_url: str, topic: str, max_articles: int
-) -> list[tuple[str, str]]:
-    """Pull likely article links from a news page."""
-    soup = BeautifulSoup(html, "html.parser")
-    topic_lower = topic.lower().strip()
-    seen: set[str] = set()
-    matched: list[tuple[str, str]] = []
-    fallback: list[tuple[str, str]] = []
-
-    for anchor in soup.find_all("a", href=True):
-        href = anchor["href"]
-        title = anchor.get_text(" ", strip=True)
-        full_url = urljoin(base_url, href)
-
-        if not full_url.startswith(("http://", "https://")):
-            continue
-        if full_url in seen:
-            continue
-        seen.add(full_url)
-
-        if not title:
-            title = full_url
-
-        if topic_lower:
-            if topic_lower in title.lower() or topic_lower in href.lower():
-                matched.append((full_url, title))
-        elif len(title) > 30:
-            fallback.append((full_url, title))
-
-        if len(matched) >= max_articles:
-            break
-
-    if matched:
-        return matched[:max_articles]
-
-    return fallback[:max_articles]
+        embeddings = OpenAIEmbeddings(
+            model=EMBEDDING_MODEL,
+            api_key=EMBEDDING_API_KEY,
+            base_url=EMBEDDING_BASE_URL,
+        )
+        return InMemoryVectorStore.from_documents(docs_list, embeddings)
+    except Exception:
+        return None
 
 
 @tool(parse_docstring=True)
-def scrape_news_site(
-    site_url: str,
-    topic: Annotated[str, InjectedToolArg] = "",
-    max_articles: Annotated[int, InjectedToolArg] = 3,
-    timeout: Annotated[float, InjectedToolArg] = 10.0,
+def list_uploaded_files(
+    grounding_files: Annotated[list[str] | None, InjectedToolArg] = None,
 ) -> str:
-    """Scrape a news site for articles and return their markdown content.
+    """List available uploaded files and indicate which are selected for grounding.
 
     Args:
-        site_url: Homepage or section page to crawl for articles.
-        topic: Keyword to prioritize in article titles/links (case-insensitive). Leave blank for top stories.
-        max_articles: Maximum number of articles to fetch (default: 3).
-        timeout: Request timeout in seconds for each HTTP request.
-
-    Returns:
-        Markdown content for the fetched articles with URLs.
+        grounding_files: (Injected) Files the user marked for RAG grounding.
     """
-    index_html, error = _fetch_html(site_url, timeout)
-    if error:
-        return error
+    upload_dir = DEFAULT_UPLOAD_DIR
+    if not upload_dir.exists():
+        return "No uploads directory found. Upload files via the UI first."
 
-    articles = _extract_article_links(index_html, site_url, topic, max_articles)
-    if not articles:
-        return f"No articles matched topic '{topic}' at {site_url}"
+    paths = [p for p in sorted(upload_dir.iterdir()) if p.is_file()]
+    if not paths:
+        return f"No files in upload directory: {upload_dir}"
 
-    result_blocks = []
-    for url, title in articles:
-        article_html, article_error = _fetch_html(url, timeout)
-        if article_error or not article_html:
-            result_blocks.append(
-                f"## {title}\n**URL:** {url}\n\n{article_error or 'No content'}\n---"
-            )
-            continue
+    selected = {f.lower() for f in grounding_files or []}
+    lines = []
+    for path in paths:
+        marker = "[*]" if path.name.lower() in selected else "[ ]"
+        try:
+            size = path.stat().st_size
+            lines.append(f"{marker} {path.name} ({size} bytes)")
+        except Exception:
+            lines.append(f"{marker} {path.name}")
+    return "Available uploaded files:\n" + "\n".join(lines)
 
-        markdown_content = markdownify(article_html)
-        result_blocks.append(
-            f"## {title}\n**URL:** {url}\n\n{markdown_content}\n---"
+
+@tool(parse_docstring=True)
+def retrieve_uploaded_context(
+    query: str,
+    top_k: int = 4,
+    grounding_files: Annotated[list[str] | None, InjectedToolArg] = None,
+    upload_dir: Annotated[str | None, InjectedToolArg] = None,
+) -> str:
+    """Search uploaded files for context to answer the user's question.
+
+    Args:
+        query: Question to retrieve supporting context for.
+        top_k: Maximum number of chunks to return (default: 4).
+        grounding_files: (Injected) Optional list of files pre-selected in the UI.
+        upload_dir: (Injected) Override upload directory path.
+    """
+    base_dir = Path(upload_dir) if upload_dir else DEFAULT_UPLOAD_DIR
+    docs = _load_text_files(base_dir, grounding_files)
+    if not docs:
+        return (
+            "No usable uploaded files found. Upload text/markdown/CSV/JSON files "
+            "and select them for grounding."
         )
 
-    return (
-        f"Scraped {len(result_blocks)} article(s) from {site_url} "
-        f"for topic '{topic or 'top stories'}':\n\n" + "\n\n".join(result_blocks)
-    )
+    store = _build_vector_store(docs)
+    if store is None:
+        return "Vector store unavailable. Check EMBEDDING_* env vars and file types."
+
+    results = store.similarity_search(query, k=max(1, min(top_k, len(docs))))
+    formatted: list[str] = []
+    for idx, doc in enumerate(results, start=1):
+        snippet = doc.page_content.strip()
+        if len(snippet) > 800:
+            snippet = snippet[:800] + "..."
+        source = doc.metadata.get("source", "unknown")
+        formatted.append(f"[{idx}] Source: {source}\n{snippet}")
+
+    return "Retrieved context from uploaded files:\n\n" + "\n\n".join(formatted)
 
 
 @tool(parse_docstring=True)
 def think_tool(reflection: str) -> str:
-    """Tool for strategic reflection on research progress and decision-making.
+    """Tool for strategic reflection on reasoning and next steps.
 
-    Use this tool after each scrape to analyze results and plan next steps systematically.
+    Use this tool after retrieval to analyze results and plan next steps systematically.
     This creates a deliberate pause in the research workflow for quality decision-making.
 
     When to use:
-        - After receiving scraped content: What key information did I find?
+        - After receiving retrieved content: What key information did I find?
         - Before deciding next steps: Do I have enough to answer comprehensively?
         - When assessing gaps: What specific information is still missing?
-        - Before concluding research: Can I provide a complete answer now?
+        - Before concluding: Can I provide a complete answer now?
 
     Args:
         reflection: Your detailed reflection on research progress, findings, gaps, and next steps

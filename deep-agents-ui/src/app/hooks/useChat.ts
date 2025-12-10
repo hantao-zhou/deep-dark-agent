@@ -16,12 +16,13 @@ import { useQueryState } from "nuqs";
 export type StateType = {
   messages: Message[];
   todos: TodoItem[];
-  files: Record<string, string>;
+  files: Record<string, any>;
   email?: {
     id?: string;
     subject?: string;
     page_content?: string;
   };
+  grounding_files?: string[];
   ui?: any;
 };
 
@@ -98,11 +99,21 @@ export function useChat({
   );
 
   const setFiles = useCallback(
-    async (files: Record<string, string>) => {
+    async (files: Record<string, any>) => {
       if (!threadId) return;
       // TODO: missing a way how to revalidate the internal state
       // I think we do want to have the ability to externally manage the state
       await client.threads.updateState(threadId, { values: { files } });
+    },
+    [client, threadId]
+  );
+
+  const setGroundingFiles = useCallback(
+    async (groundingFiles: string[]) => {
+      if (!threadId) return;
+      await client.threads.updateState(threadId, {
+        values: { grounding_files: groundingFiles },
+      });
     },
     [client, threadId]
   );
@@ -147,9 +158,11 @@ export function useChat({
     stream,
     todos: stream.values.todos ?? [],
     files: stream.values.files ?? {},
+    groundingFiles: stream.values.grounding_files ?? [],
     email: stream.values.email,
     ui: stream.values.ui,
     setFiles,
+    setGroundingFiles,
     messages: stream.messages,
     isLoading: stream.isLoading,
     isThreadLoading: stream.isThreadLoading,
